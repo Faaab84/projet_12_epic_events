@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 
 
 DATABASE_URL = "postgresql+psycopg2://crm_user:balaramane@localhost:5432/crm_epic_events"
@@ -7,5 +7,7 @@ DATABASE_URL = "postgresql+psycopg2://crm_user:balaramane@localhost:5432/crm_epi
 engine = create_engine(DATABASE_URL)
 engine.connect()
 
-Base = declarative_base()
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+
+BaseModel = declarative_base()
 print("Connexion à la base de données réussie.")
