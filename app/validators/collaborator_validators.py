@@ -11,7 +11,7 @@ def is_valid_last_name(last_name) -> bool:
 
 def is_valid_email(email: str) -> bool:
     email = email.strip()
-    pattern = r'^[\w\.-]+@[\w\.-]+\.\w{2,}$'
+    pattern = r"^[\w\.-]+@[\w\.-]+\.\w{2,}$"
     return re.match(pattern, email) is not None
 
 
@@ -24,5 +24,17 @@ def is_valid_login(login) -> bool:
     return bool(login.strip()) and len(login) <= 20
 
 
-def is_valid_password(password) -> bool:
-    return bool(password.strip()) and len(password) <= 100
+def is_valid_password_complexity(password: str) -> bool:
+
+    pattern = re.compile(
+        r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{12,}$'  # noqa: E501
+    )
+
+    # How this regex works:
+    # (?=.*[a-z]) → at least one lowercase letter
+    # (?=.*[A-Z]) → at least one uppercase letter
+    # (?=.*\d) → at least one digit
+    # (?=.*[@$!%*#?&]) → at least one special character
+    # [A-Za-z\d@$!%*#?&]{12,} → at least 12 characters from the allowed types
+
+    return bool(pattern.match(password)) and len(password) <= 100
