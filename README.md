@@ -168,6 +168,15 @@ Sales:
    - Create event
    - Log out
 
+## Connexion et mdp 
+
+
+Le mot de passes des comptes est : Test123@4567
+
+login commerciale : CBrunel ou CDelorme
+login support : BRenard ou Kduran ou ALefebvre
+login gestion : AMartinez
+
 Vous pouvez naviguer dans le menu à l’aide du clavier. Chaque commande vous guidera pas à pas à travers les saisies nécessaires.
 
 ## Connexion et permissions
