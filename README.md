@@ -16,12 +16,12 @@ L'architecture suit les bonnes pratiques avec une séparation claire des respons
 
 ## Installation
 
-1. Clone the repository:
+1. Cloner le depot:
 
    ```bash
    git clone https://github.com/Faaab84/projet_12_epic_events.git
 
-2. Create a virtual environment and activate it:
+2. Créer l'environnement virtuel :
 
    >for Linux/macOS:
    >```bash
@@ -35,17 +35,14 @@ L'architecture suit les bonnes pratiques avec une séparation claire des respons
    >.\venv\Scripts\activate
    >```
 
-3. Install dependencies:
+3. Installer les dependances:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Set up environment variables
-
-   To run this project securely and ensure proper behavior in different environments, you need to configure the following environment variables:
-
-   In your terminal session before running the app
+4. Pour exécuter ce projet de manière sécurisée et garantir son bon fonctionnement dans différents environnements, il est indispensable de configurer les variables d’environnement suivantes :
+Dans votre session de terminal, avant de lancer l’application :
 
    >For Linux/macOS:
    >```bash
@@ -71,25 +68,26 @@ Installation de postegreSQL driver avec :
 pip install psycopg2-binary
 ```
 
-Connect to postegreSQL :
+Connexion a postegreSQL :
 ```bash
 psql -U postgres
 ```
 
-Create a user (instead of the default postgres superuser): 
+Créer un user (superuser): 
 ```sql
 CREATE USER <user_name> WITH PASSWORD <motdepasse>;
 ```
 
 ### Créer la database
 
-Create, name your database and set the new user as owner:
+Créer, nommer votre base de données et désigner le nouvel utilisateur comme propriétaire :
 
 ```sql
 CREATE DATABASE <database_name> OWNER <username>;
 ```
 
-Grant grant all privileges (this is usually done automatically if the user is the owner, but it’s safer to include it):
+Accorde toutes les autorisations (cela se fait généralement automatiquement si l’utilisateur est le propriétaire, mais il est plus sûr de l’inclure).
+
 ```sql
 GRANT ALL PRIVILEGES ON DATABASE <database_name> TO <username>;
 ```
