@@ -103,6 +103,11 @@ Configurer la variable DATABASE_URL dans le fichier .env
 
 Placez vous dans le repertoire du projet 12 et ouvré une fenetre de commande :
 ```
+python init_db.py
+```
+
+Mise en place des jeux de données pour présentation et essai : 
+```
 psql -U "login" -d "database_name" -f SQL\seed.sql
 ```
 
