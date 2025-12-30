@@ -12,10 +12,9 @@ class Customer(User):
     creation_date = Column(Date)
     last_update = Column(Date)
     commercial_id = Column(
-        Integer,
-        ForeignKey("collaborators.id"),
-        nullable=False
+        Integer, ForeignKey("collaborators.id"), nullable=False
     )
 
+    # Establish relationship with other models
     collaborator = relationship("Collaborator", back_populates="customers")
     contracts = relationship("Contract", back_populates="customer")

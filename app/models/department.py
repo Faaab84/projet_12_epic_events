@@ -9,4 +9,5 @@ class Department(BaseModel):
     id = Column(Integer, primary_key=True)
     name = Column(String(20), unique=True, nullable=False)
 
+    # Establish relationship with other models
     collaborators = relationship("Collaborator", back_populates="department")

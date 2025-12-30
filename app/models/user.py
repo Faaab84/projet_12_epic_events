@@ -3,7 +3,7 @@ from sqlalchemy import Column, String
 
 
 class User(BaseModel):
-    __abstract__ = True
+    __abstract__ = True  # This class won't be mapped to a table
 
     first_name = Column(String(50), nullable=False)
     last_name = Column(String(50), nullable=False)

@@ -14,6 +14,7 @@ class Contract(BaseModel):
     customer_id = Column(Integer, ForeignKey("customers.id"), nullable=False)
     status_id = Column(Integer, ForeignKey("statuses.id"), nullable=False)
 
+    # Establish relationship with other models
     customer = relationship("Customer", back_populates="contracts")
     status = relationship("Status", back_populates="contracts")
     events = relationship("Event", back_populates="contract")
