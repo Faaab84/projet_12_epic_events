@@ -113,6 +113,7 @@ psql -U "login" -d "database_name" -f SQL\seed.sql
 
 
 
+
 ## Usage and Features
 
 Pour demarrer l'application : 
@@ -198,7 +199,7 @@ Toutes les permissions sont appliquées via une couche logique centralisée, gar
 ## Error Monitoring avec Sentry
 
 Ce projet intègre Sentry afin de surveiller les erreurs en production, d’améliorer la fiabilité de l’application et de faciliter le débogage.
-
+<img src="docs/Dashboard_Sentry.png"/>
 ## Securité
 
 Les mesures de sécurité suivantes sont mises en œuvre dans le projet :
@@ -210,3 +211,6 @@ Les données des utilisateurs sont anonymisées dans les journaux (logs) afin de
 Les injections SQL sont empêchées par l’utilisation exclusive de l’ORM SQLAlchemy pour toutes les interactions avec la base de données.
 Toutes les configurations sensibles sont gérées via des variables d’environnement — aucune donnée secrète n’est codée en dur dans le code source.
 Lors des phases de test, des variables d’environnement fictives sont injectées et Sentry est désactivé afin de garantir l’absence de fuite de données vers l’extérieur.
+## Diagramme de classe
+
+<img src="docs/Schema_de_classe_P12.png"/>
