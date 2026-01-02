@@ -1,10 +1,10 @@
-from app.models.user import User
+from db import BaseModel
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy import Date
 
 
-class Customer(User):
+class Customer(BaseModel):
     __tablename__ = "customers"
 
     id = Column(Integer, primary_key=True)
@@ -15,6 +15,5 @@ class Customer(User):
         Integer, ForeignKey("collaborators.id"), nullable=False
     )
 
-    # Establish relationship with other models
     collaborator = relationship("Collaborator", back_populates="customers")
     contracts = relationship("Contract", back_populates="customer")

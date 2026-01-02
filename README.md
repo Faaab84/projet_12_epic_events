@@ -214,3 +214,5 @@ Lors des phases de test, des variables d’environnement fictives sont injectée
 ## Diagramme de classe
 
 <img src="docs/Schema_de_classe_P12.png"/>
+
+<img src="docs/diag.png"/>

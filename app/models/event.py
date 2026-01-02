@@ -18,6 +18,5 @@ class Event(BaseModel):
         Integer, ForeignKey("collaborators.id"), nullable=True
     )
 
-    # Establish relationship with other models
     collaborator = relationship("Collaborator", back_populates="events")
     contract = relationship("Contract", back_populates="events")

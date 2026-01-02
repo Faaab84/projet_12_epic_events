@@ -13,7 +13,6 @@ class Collaborator(User):
         Integer, ForeignKey("departments.id"), nullable=False
     )
 
-    # Establish relationship with Department
     department = relationship("Department", back_populates="collaborators")
     customers = relationship("Customer", back_populates="collaborator")
     events = relationship("Event", back_populates="collaborator")
