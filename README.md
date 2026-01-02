@@ -213,6 +213,6 @@ Toutes les configurations sensibles sont gérées via des variables d’environn
 Lors des phases de test, des variables d’environnement fictives sont injectées et Sentry est désactivé afin de garantir l’absence de fuite de données vers l’extérieur.
 ## Diagramme de classe
 
-<img src="docs/Schema_de_classe_P12.png"/>
+<img src="docs/Schema_de_classe_P121.png"/>
 
 <img src="docs/diag.png"/>
